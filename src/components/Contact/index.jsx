@@ -108,8 +108,14 @@ const Contact = () => {
                   <h5>
                     <Translation keyCode="contact.email" />
                   </h5>
-                  <a href="mailto:info@ekipmanisguvenlik.com">
-                    info@ekipmanisguvenlik.com
+                  <a
+                    href={`mailto:${TranslationMethod(
+                      "contacts.email",
+                      translations,
+                      currentLang
+                    )}`}
+                  >
+                    <Translation keyCode="contacts.email" />
                   </a>
                 </div>
 
@@ -117,8 +123,15 @@ const Contact = () => {
                   <h5>
                     <Translation keyCode="contact.tel" />
                   </h5>
-                  <a className="whitespace-nowrap" href="tel:+905353294507">
-                    +90 535 329 4507
+                  <a
+                    className="whitespace-nowrap"
+                    href={`tel:${TranslationMethod(
+                      "contacts.phone",
+                      translations,
+                      currentLang
+                    )}`}
+                  >
+                    <Translation keyCode="contacts.phone" />
                   </a>
                 </div>
               </div>

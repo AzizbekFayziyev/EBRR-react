@@ -2,11 +2,11 @@ import React, { useContext, useState } from "react";
 import styles from "./styles.module.scss";
 import { CircleX, Menu } from "lucide-react";
 import { AppContext } from "@/context";
-import Translation from "../UI/Translation";
+import Translation, { TranslationMethod } from "../UI/Translation";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
-  const { currentLang, setLang } = useContext(AppContext);
+  const { currentLang, setLang, translations } = useContext(AppContext);
 
   const handleChangeLang = (lang) => {
     localStorage.setItem("lang", lang);
@@ -48,7 +48,15 @@ const Navbar = () => {
             </ul>
 
             <div className={styles.actions}>
-              <a href="tel:+905354094507">+90 535 409 4507</a>
+              <a
+                href={`tel:${TranslationMethod(
+                  "contacts.phone",
+                  translations,
+                  currentLang
+                )}`}
+              >
+                <Translation keyCode="contacts.phone" />
+              </a>
 
               <div className={styles.divider} />
 

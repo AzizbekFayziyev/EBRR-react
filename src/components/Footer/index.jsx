@@ -75,12 +75,26 @@ const Footer = () => {
             </h3>
             <ul>
               <li>
-                <a href="tel:+905354094507">+90 535 409 4507</a>
+                <a
+                  href={`tel:${TranslationMethod(
+                    "contacts.phone",
+                    translations,
+                    currentLang
+                  )}`}
+                >
+                  <Translation keyCode="contacts.phone" />
+                </a>
               </li>
 
               <li>
-                <a href="mailto:info@ekipmanisguvenlik.com">
-                  info@ekipmanisguvenlik.com
+                <a
+                  href={`mailto:${TranslationMethod(
+                    "contacts.email",
+                    translations,
+                    currentLang
+                  )}`}
+                >
+                  <Translation keyCode="contacts.email" />
                 </a>
               </li>
 

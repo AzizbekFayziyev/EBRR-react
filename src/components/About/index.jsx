@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./styles.module.scss";
 import Title from "@/components/UI/Title";
 import { ChevronsRight, Phone } from "lucide-react";
-import Translation from "../UI/Translation";
+import { AppContext } from "@/context";
+import Translation, { TranslationMethod } from "../UI/Translation";
 
 const About = () => {
+  const { currentLang, translations } = useContext(AppContext);
   return (
     <section id="about" className={styles.about}>
       <div className="wrapperBorderedContent sm:pt-20 pt-10">
@@ -50,7 +52,14 @@ const About = () => {
               </p>
             </div>
 
-            <a href="tel:+905354094507" className={`${styles.card}`}>
+            <a
+              href={`tel:${TranslationMethod(
+                "contacts.phone",
+                translations,
+                currentLang
+              )}`}
+              className={`${styles.card}`}
+            >
               <span>
                 <Translation keyCode="about.card4" />
                 <ChevronsRight size={20} />
