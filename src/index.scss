@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+// Golos text font
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap");
+
+// global styles
+
+::-webkit-scrollbar {
+  @apply w-2 bg-white;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-light;
+}
+
+@mixin wrapperBordered() {
+  @apply border-x border-darkBorder/35 max-w-[1440px] mx-auto;
+}
+
+html,
+body {
+  @apply overflow-x-hidden scroll-smooth;
+  font-family: "Golos Text", sans-serif;
+}
+
+.wrapper {
+  @apply max-w-[1440px] mx-auto px-2;
+}
+
+.wrapperInside {
+  @apply max-w-[1196px] mx-auto px-2;
+}
+
+.wrapperBordered {
+  @include wrapperBordered();
+}
+
+.wrapperBorderedContent {
+  @include wrapperBordered();
+  @apply border-[#E7E7ED];
+}
