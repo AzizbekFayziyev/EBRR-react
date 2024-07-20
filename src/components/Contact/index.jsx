@@ -83,7 +83,7 @@ const Contact = () => {
             </h2>
 
             <div className={styles.infoItems}>
-              <div className={styles.itemFlex}>
+              {/* <div className={styles.itemFlex}>
                 <div className={styles.item}>
                   <h5>
                     <Translation keyCode="contact.addressTitle" />
@@ -92,7 +92,7 @@ const Contact = () => {
                     <Translation keyCode="contact.address" />
                   </h6>
                 </div>
-              </div>
+              </div> */}
 
               <div className={styles.item}>
                 <h5>
@@ -119,6 +119,23 @@ const Contact = () => {
                   </a>
                 </div>
 
+                <div className={styles.item}>
+                  <h5>
+                    <Translation keyCode="contact.email" />
+                  </h5>
+                  <a
+                    href={`mailto:${TranslationMethod(
+                      "contacts.email",
+                      translations,
+                      currentLang
+                    )}`}
+                  >
+                    <Translation keyCode="contacts.email2" />
+                  </a>
+                </div>
+              </div>
+
+              <div className={styles.itemFlex}>
                 <div className={styles.item}>
                   <h5>
                     <Translation keyCode="contact.tel" />

@@ -99,6 +99,19 @@ const Footer = () => {
               </li>
 
               <li>
+                <a
+                  href={`mailto:${TranslationMethod(
+                    "contacts.email2",
+                    translations,
+                    currentLang
+                  )}`}
+                >
+                  <Translation keyCode="contacts.email2" />
+                </a>
+              </li>
+
+
+              <li>
                 <Translation keyCode="contact.address2" />
               </li>
             </ul>
@@ -124,11 +137,11 @@ const Footer = () => {
           </div>
         </nav>
       </div>
-      <div className={styles.footerBottom}>
+      {/* <div className={styles.footerBottom}>
         <h3>
           <Translation keyCode="footer.bottom" />
         </h3>
-      </div>
+      </div> */}
     </footer>
   );
 };

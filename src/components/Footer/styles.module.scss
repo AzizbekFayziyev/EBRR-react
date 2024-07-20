@@ -2,7 +2,7 @@
   @apply bg-dark text-white;
 
   .footerContent {
-    @apply max-w-[1440px] mx-auto pt-10 sm:px-10 px-4;
+    @apply max-w-[1440px] mx-auto py-10 sm:px-10 px-4;
 
     .footerNav {
       @apply flex lg:flex-nowrap flex-wrap lg:justify-between justify-center lg:text-left lg:gap-10 gap-16;

@@ -12,7 +12,7 @@ const About = () => {
       <div className="wrapperBorderedContent sm:pt-20 pt-10">
         <div className="wrapperInside">
           <Title subtitle={<Translation keyCode="about.subtitle" />}>
-            <Translation keyCode="about.title" />
+            {/* <Translation keyCode="about.title" /> */}
           </Title>
 
           <p className={styles.description}>
